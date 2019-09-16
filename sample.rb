@@ -58,7 +58,6 @@ class Janken
         # あいこの時はもう一度 enemy_hand にグー、チョキ、パーの値をランダムに代入する
         enemy_hand = rand(0..2)
       end
-
     end
   end
 end
