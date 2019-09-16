@@ -12,7 +12,7 @@ class Player
       player_hand_length = player_hand_str.length
       # この後の条件分岐と処理のため数値に変換して player_hand に代入
       player_hand = player_hand_str.to_i
-      # 0,1,2いずれかの文字かつ0以上2以下で文字数人一桁のとき以外は再入力を求めるよう出力
+      # 0,1,2いずれかの文字かつ0以上2以下で文字数が一桁のとき以外は再入力を求めるよう出力
       unless (/[0-2]{1}/).match?("#{player_hand_str}") && player_hand >= 0 && player_hand <= 2 && player_hand_length == 1
         puts "0〜2の数字を入力してください。"
       else
