@@ -45,7 +45,7 @@ class Janken
       when 1 then enemy_hand_ex = "チョキ"
       when 2 then enemy_hand_ex = "パー"
       end
-      # 勝敗が決まったらループ処理を抜ける
+      # じゃんけんの勝ち負けを判断する計算式から出力された数字から勝敗を決定してループ処理を抜ける
       case calc_result
       when 2
         puts "相手の手は#{enemy_hand_ex}です。あなたの勝ちです。"
@@ -54,7 +54,6 @@ class Janken
         puts "相手の手は#{enemy_hand_ex}です。あなたの負けです。"
         break
       else
-        puts "引き分けだよ〜ん。もう一回！" #提出の時は消す
         # あいこの時はもう一度 enemy_hand にグー、チョキ、パーの値をランダムに代入する
         enemy_hand = rand(0..2)
       end
