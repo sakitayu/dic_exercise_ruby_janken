@@ -15,7 +15,7 @@ class Player
       # 0,1,2いずれかの文字かつ0以上2以下で文字数人一桁のとき以外は再入力を求めるよう出力
       unless (/[0-2]{1}/).match?("#{player_hand_str}") && player_hand >= 0 && player_hand <= 2 && player_hand_length == 1
         puts "0〜2の数字を入力してください。"
-        else
+      else
         return player_hand
         break
       end
@@ -55,7 +55,7 @@ class Janken
         break
       else
         puts "引き分けだよ〜ん。もう一回！" #提出の時は消す
-        # あいこの時はもう一度 enemy_hand にグー、チョキ、パーの値をランダムに代入す
+        # あいこの時はもう一度 enemy_hand にグー、チョキ、パーの値をランダムに代入する
         enemy_hand = rand(0..2)
       end
 
