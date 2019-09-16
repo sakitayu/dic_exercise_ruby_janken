@@ -6,11 +6,11 @@ class Player
       puts "0: グー"
       puts "1: チョキ"
       puts "2: パー"
-      #この後の正規表現で条件分岐するために入力した文字もしくは数値を文字列に変換(アルファベットが0になってしまうのを回避)
+      # この後の正規表現で条件分岐するために入力した文字もしくは数値を文字列に変換(アルファベットが0になってしまうのを回避)
       player_hand_str = gets.chomp.to_s
-      #この後の条件分岐で文字列もしくは数字が一桁かどうか判別するために文字数を player_hand_length に代入
+      # この後の条件分岐で文字列もしくは数字が一桁かどうか判別するために文字数を player_hand_length に代入
       player_hand_length = player_hand_str.length
-      #この後の条件分岐と処理のため数値に変換して player_hand に代入
+      # この後の条件分岐と処理のため数値に変換して player_hand に代入
       player_hand = player_hand_str.to_i
       # 0,1,2いずれかの文字かつ0以上2以下で文字数人一桁のとき以外は再入力を求めるよう出力
       unless (/[0-2]{1}/).match?("#{player_hand_str}") && player_hand >= 0 && player_hand <= 2 && player_hand_length == 1
@@ -37,15 +37,15 @@ class Janken
     # 相手がグー、チョキ、パーのうち、何を出したのかも表示させる
 
     loop do
-      #じゃんけんの勝ち負けを判断する計算式を変数calc_resultに代入
+      # じゃんけんの勝ち負けを判断する計算式を変数calc_resultに代入
       calc_result = (player_hand - enemy_hand + 3) % 3
-      #相手の出した手を数字からグーチョキパーに変換して変数enemy_hand_exに代入
+      # 相手の出した手を数字からグーチョキパーに変換して変数enemy_hand_exに代入
       case enemy_hand
       when 0 then enemy_hand_ex = "グー"
       when 1 then enemy_hand_ex = "チョキ"
       when 2 then enemy_hand_ex = "パー"
       end
-
+      # 勝敗が決まったらループ処理を抜ける
       case calc_result
       when 2
         puts "相手の手は#{enemy_hand_ex}です。あなたの勝ちです。"
