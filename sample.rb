@@ -63,10 +63,8 @@ class Janken
   end
 end
 
-
-
 # ① player = Player.newの記述の意味↓
-# Playerクラスからインスタンスを生成して変数に代入
+# Playerクラスからインスタンスを生成して変数playerに代入
 # ② 大文字のPlayerと小文字のplayerの違い↓
 # 大文字のPlayerはクラス、小文字のplayerはインスタンス
 player = Player.new
@@ -74,7 +72,4 @@ enemy = Enemy.new
 janken = Janken.new
 
 # 下記の記述で、ジャンケンメソッドが起動される
-
-
-
 janken.pon(player.hand, enemy.hand)
